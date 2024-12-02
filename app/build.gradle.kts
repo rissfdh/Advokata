@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.projectadvocata"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.projectadvocata"
@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -51,4 +52,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.glide)
+    implementation(libs.androidx.exifinterface)
+    implementation (libs.material.v1110)
+    implementation (libs.material.v140)
 }
