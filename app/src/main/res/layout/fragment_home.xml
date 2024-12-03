@@ -70,7 +70,7 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/buttonKUHP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -82,7 +82,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonUUD"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -103,7 +103,7 @@
             android:textSize="20sp"
             android:text="@string/lawyer_list_title"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button2" />
+            app:layout_constraintTop_toBottomOf="@id/buttonKUHP" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_upcoming"

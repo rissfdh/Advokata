@@ -19,7 +19,8 @@
         app:civ_border_color="@color/blue_700"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingClass" />
 
     <!-- Name TextView -->
     <TextView
@@ -47,14 +48,27 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Button or Additional Info -->
+
     <Button
         android:id="@+id/editProfileButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit Profile"
-        app:layout_constraintTop_toBottomOf="@id/profileEmail"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="44dp"
+        android:text="@string/edit_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileEmail" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

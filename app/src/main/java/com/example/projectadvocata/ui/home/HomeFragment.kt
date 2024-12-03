@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projectadvocata.databinding.FragmentHomeBinding
 import com.example.projectadvocata.ui.ViewModelFactory
+import com.example.projectadvocata.ui.webview.UUD
+import com.example.projectadvocata.ui.webview.UUKUHP
 import kotlin.getValue
 
 class HomeFragment : Fragment() {
@@ -37,6 +39,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerViews()
         observeEvents()
+        binding.buttonKUHP.setOnClickListener {
+            val intent = Intent(requireContext(), UUKUHP::class.java)
+            startActivity(intent)
+        }
+        binding.buttonUUD.setOnClickListener {
+            val intent = Intent(requireContext(), UUD::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupRecyclerViews() {

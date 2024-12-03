@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">projectadvocata</string>
+    <string name="app_name">Advocata</string>
     <string name="title_home">Home</string>
     <string name="title_lawyer">Find Lawyer</string>
     <string name="title_chatbot">ChatBot</string>
@@ -19,8 +19,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_have_account">Already have account?</string>
     <string name="user_name">Name</string>
-    <string name="title_welcome_page">Welcome To MyStory</string>
-    <string name="message_welcome_page">Want to upload your memories and complaints during the resurrection? Just on my story!</string>
+    <string name="title_welcome_page">Advocata - Mitra Hukum Anda</string>
+    <string name="message_welcome_page">Solusi terbaik untuk mendukung kebutuhan hukum Anda. Bersama kami, wujudkan pelayanan yang cepat, transparan, dan terpercaya</string>
     <string name="GetStarted">Get Started\n</string>
     <string name="flowat">Floating Button</string>
     <string name="description_story">This is a description of the story</string>
@@ -39,5 +39,6 @@
 
     <string name="lawyer_list_title">Lawyer List</string>
     <string name="news_list_title">Berita Terbaru</string>
+    <string name="edit_profile">Edit Profile</string>
 
 </resources>
