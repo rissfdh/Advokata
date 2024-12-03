@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/eventPhoto"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/lawyer_imageLogo"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:text="@string/lawyer_name" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -12,14 +12,17 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.projectadvocata.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_chatbot"
+        android:name="com.example.projectadvocata.ui.chatbot.ChatbotFragment"
+        android:label="@string/chatbot"
+        tools:layout="@layout/fragment_chatbot" />
+
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.projectadvocata.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_market"
+        android:name="com.example.projectadvocata.ui.lawyer_market.MarketFragment"
+        android:label="@string/lawyer_market"
+        tools:layout="@layout/fragment_market" />
+
+
 </navigation>

@@ -7,13 +7,13 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:id="@+id/navigation_chatbot"
+        android:icon="@drawable/chatbot"
+        android:title="@string/chatbot" />
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:id="@+id/navigation_market"
+        android:icon="@drawable/ic_marketplace"
+        android:title="@string/lawyer_market" />
 
 </menu>

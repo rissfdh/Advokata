@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //advokata_color_list
+    <color name="biru_tuwa">#1F2839</color>
+    <color name="biru_agak_tuwa">#043B68</color>
+    <color name="biru_agak_beda">#1F3762</color>
+    <color name="putih_menguning">#FFFFE3</color>
+    <color name="putih_agak_abu_imo">#F4F5EF</color>
+
+    <color name="blue">#414242</color>
+    <color name="biru">#00BCD4</color>
+    <color name="grey">#322F35</color>
+    <color name="placeholder">#6FB6B6B6</color>
+    <color name="light_blue">#8c8f8f</color>
 </resources>
