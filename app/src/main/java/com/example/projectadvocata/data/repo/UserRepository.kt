@@ -1,4 +1,4 @@
-package com.example.projectadvocata.data
+package com.example.projectadvocata.data.repo
 
 import android.util.Log
 import com.example.projectadvocata.data.pref.UserModel

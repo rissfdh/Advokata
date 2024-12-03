@@ -1,7 +1,7 @@
 package com.example.projectadvocata.di
 
 import android.content.Context
-import com.example.projectadvocata.data.UserRepository
+import com.example.projectadvocata.data.repo.UserRepository
 import com.example.projectadvocata.data.pref.UserPreference
 import com.example.projectadvocata.data.pref.dataStore
 import com.example.projectadvocata.data.retrofit.ApiConfig

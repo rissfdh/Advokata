@@ -30,4 +30,12 @@
     <string name="description">Describe your story heree</string>
     <string name="logout">logout\n</string>
     <string name="noData">No Data</string>
+
+
+    <string name="uu_kuhp">UU KUHP</string>
+    <string name="uud_1945">UUD 1945</string>
+
+    <string name="lawyer_list_title">Lawyer List</string>
+    <string name="news_list_title">Berita Terbaru</string>
+
 </resources>
