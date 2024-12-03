@@ -27,7 +27,7 @@ class WelcomeActivity : AppCompatActivity() {
         signUpButton = findViewById(R.id.signupButton)
 
         checkLoginStatus()
-
+        supportActionBar?.hide()
         setupClickListeners()
     }
 
