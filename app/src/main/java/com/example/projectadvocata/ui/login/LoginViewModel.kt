@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.projectadvocata.data.UserRepository
+import com.example.projectadvocata.data.repo.UserRepository
 import com.example.projectadvocata.data.pref.UserModel
 import kotlinx.coroutines.launch
 

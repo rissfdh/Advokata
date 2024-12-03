@@ -3,7 +3,7 @@ package com.example.projectadvocata.ui
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.projectadvocata.data.UserRepository
+import com.example.projectadvocata.data.repo.UserRepository
 import com.example.projectadvocata.di.Injection
 import com.example.projectadvocata.ui.login.LoginViewModel
 import com.example.projectadvocata.ui.register.RegisterViewModel
