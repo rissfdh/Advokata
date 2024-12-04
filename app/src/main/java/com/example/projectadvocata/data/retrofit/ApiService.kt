@@ -2,24 +2,28 @@ package com.example.projectadvocata.data.retrofit
 
 import com.example.projectadvocata.data.response.LoginResponse
 import com.example.projectadvocata.data.response.RegisterResponse
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
+import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ApiService {
-    @FormUrlEncoded
-    @POST("/v1/register")
+    @POST("api/auth/register")
     suspend fun register(
-        @Field("name") name: String,
-        @Field("email") email: String,
-        @Field("password") password: String
+        @Body requestBody: RegisterRequest
     ): RegisterResponse
-    @FormUrlEncoded
-    @POST("/v1/login")
+
+    @POST("api/auth/login")
     suspend fun login(
-        @Field("email") email: String,
-        @Field("password") password: String
-    ) : LoginResponse
-
-
+        @Body requestBody: LoginRequest
+    ): LoginResponse
 }
+
+data class RegisterRequest(
+    val name: String,
+    val email: String,
+    val password: String
+)
+
+data class LoginRequest(
+    val email: String,
+    val password: String
+)
