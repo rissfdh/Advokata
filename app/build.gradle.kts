@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
 }
 
 android {
@@ -65,6 +66,6 @@ dependencies {
     implementation(libs.androidx.exifinterface)
     implementation (libs.material.v1110)
     implementation (libs.material.v140)
-
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
 }
