@@ -13,12 +13,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.projectadvocata.databinding.ActivityRegisterBinding
 import com.example.projectadvocata.ui.ViewModelFactory
 import com.example.projectadvocata.ui.login.LoginActivity
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     private val registerViewModel by viewModels<RegisterViewModel> {
         ViewModelFactory.getAuthInstance(this)
     }
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +32,15 @@ class RegisterActivity : AppCompatActivity() {
         setupClickListeners()
         observeViewModel()
         setupAction()
+        setupDatabaseFirebase()
+
     }
+    private fun setupDatabaseFirebase() {
+        database = FirebaseDatabase.getInstance().getReferenceFromUrl(
+            "https://advokata-1109-default-rtdb.firebaseio.com/"
+        )
+    }
+
     private fun setupView() {
         @Suppress("DEPRECATION")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
