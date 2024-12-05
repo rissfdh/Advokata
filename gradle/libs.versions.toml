@@ -26,6 +26,8 @@ materialVersion = "1.12.0"
 glide = "4.16.0"
 legacySupportV4 = "1.0.0"
 fragmentKtx = "1.8.5"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
 
 
 [libraries]
@@ -54,10 +56,12 @@ glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
