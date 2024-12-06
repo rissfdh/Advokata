@@ -44,5 +44,9 @@
     <string name="emailuser_gmail_com">emailuser@gmail.com</string>
     <string name="kota_asal_user">Kota asal user</string>
     <string name="tentang_kami">Tentang Kami</string>
+    <string name="advokata_about_us">Legal Consultation Platform with Chatbot Features and Lawyer Finder.</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="back_button">Back</string>
+    <string name="logout_button">LOGOUT</string>
 
 </resources>

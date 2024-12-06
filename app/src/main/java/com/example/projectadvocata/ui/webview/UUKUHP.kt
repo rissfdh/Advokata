@@ -14,6 +14,7 @@ class UUKUHP :  AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uukuhp)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
 
         val webView = findViewById<WebView>(R.id.webViewUUKUHP)
         webView.settings.javaScriptEnabled = true
@@ -21,6 +22,14 @@ class UUKUHP :  AppCompatActivity(){
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
                 view.loadUrl("javascript:alert('Web yang berisi Kitab Undang-Undang Hukum Perdata berhasil dimuat')")
+                view?.evaluateJavascript(
+                    """
+                    (function() {
+                        // Sembunyikan semua elemen selain daftar PDF
+                        document.body.innerHTML = document.querySelector('.pdf-list').outerHTML;
+                    })();
+                    """.trimIndent(), null
+                )
             }
         }
 

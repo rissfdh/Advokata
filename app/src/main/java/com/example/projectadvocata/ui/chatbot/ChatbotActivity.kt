@@ -12,5 +12,6 @@ class ChatbotActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chatbot)
         supportActionBar?.show()
         supportActionBar?.title = getString(R.string.title_chatbot)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
     }
 }
