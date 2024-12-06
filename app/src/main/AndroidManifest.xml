@@ -35,10 +35,20 @@
             android:exported="true" />
         <activity
             android:name=".ui.chatbot.ChatbotActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ui.profile.ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.profile.AboutUsActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.profile.ProfileActivity" />
+        <activity
+            android:name=".ui.profile.EditProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.profile.ProfileActivity" />
         <activity
             android:name=".ui.webview.UUD"
             android:exported="true" />

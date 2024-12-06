@@ -21,7 +21,7 @@
     <string name="user_name">Name</string>
     <string name="title_welcome_page">Advocata - Mitra Hukum Anda</string>
     <string name="message_welcome_page">Solusi terbaik untuk mendukung kebutuhan hukum Anda. Bersama kami, wujudkan pelayanan yang cepat, transparan, dan terpercaya</string>
-    <string name="GetStarted">Get Started\n</string>
+    <string name="get_started_button">Get Started</string>
     <string name="flowat">Floating Button</string>
     <string name="description_story">This is a description of the story</string>
     <string name="story_image">image\n</string>
