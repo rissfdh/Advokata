@@ -22,6 +22,11 @@ class UserRepository private constructor(
             } else {
                 Result.failure(Exception(response.message))
             }
+        } catch (e: HttpException) {
+            when (e.code()) {
+                500 -> Result.failure(Exception("Email sudah digunakan atau format email salah"))
+                else -> Result.failure(e)
+            }
         } catch (e: Exception) {
             Result.failure(e)
         }
@@ -35,25 +40,25 @@ class UserRepository private constructor(
             } else {
                 Result.failure(Exception(response.message))
             }
+        } catch (e: HttpException) {
+            when (e.code()) {
+                400 -> Result.failure(Exception("Email atau password salah"))
+                else -> Result.failure(e)
+            }
         } catch (e: Exception) {
             Result.failure(e)
         }
     }
-
-
     suspend fun saveSession(user: UserModel) {
         Log.d("UserRepository", "Saving session for user: $user")
         userPreference.saveSession(user)
     }
-
     fun getSession(): Flow<UserModel> {
         return userPreference.getSession()
     }
-
     suspend fun logout() {
         userPreference.logout()
     }
-
     companion object {
         @Volatile
         private var instance: UserRepository? = null

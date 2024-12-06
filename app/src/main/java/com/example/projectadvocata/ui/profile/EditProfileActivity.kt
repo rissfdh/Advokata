@@ -22,7 +22,7 @@ class EditProfileActivity : AppCompatActivity() {
         }
 
         // Setup aksi untuk tombol edit foto (opsional)
-        binding.ivEditPhoto.setOnClickListener {
+        binding.fab.setOnClickListener {
             editProfilePhoto()
         }
     }
