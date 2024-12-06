@@ -15,6 +15,7 @@ class UUD : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uud)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
 
         val webView = findViewById<WebView>(R.id.webViewUUD)
         webView.settings.javaScriptEnabled = true

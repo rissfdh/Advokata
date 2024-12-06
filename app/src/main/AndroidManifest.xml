@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projectadvocata"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ui.welcome.WelcomeActivity"
             android:exported="true">
@@ -35,16 +38,20 @@
             android:exported="true" />
         <activity
             android:name=".ui.chatbot.ChatbotActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.profile.ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ui.webview.UUD"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ui.webview.UUKUHP"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ui.profile.AboutUsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
