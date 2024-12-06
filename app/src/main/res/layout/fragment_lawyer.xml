@@ -7,7 +7,6 @@
     android:title="@string/title_lawyer"
     tools:context=".ui.lawyer.LawyerFragment">
 
-    <!-- RecyclerView Grid for Lawyers -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLawyers"
         android:layout_width="0dp"
