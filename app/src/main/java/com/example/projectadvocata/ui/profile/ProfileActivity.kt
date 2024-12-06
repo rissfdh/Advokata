@@ -38,6 +38,9 @@ class ProfileActivity : AppCompatActivity() {
         binding.btnAboutUS.setOnClickListener {
             startActivity(Intent(this, AboutUsActivity::class.java))
         }
+        binding.btnEditProfile.setOnClickListener {
+            startActivity(Intent(this, EditProfileActivity::class.java))
+        }
     }
 
     private fun observeSession() {

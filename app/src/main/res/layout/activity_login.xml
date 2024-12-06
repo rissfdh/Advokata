@@ -125,7 +125,7 @@
             android:minHeight="56dp"
             android:text="@string/log_in"
             android:textSize="16sp"
-            app:backgroundTint="@color/blue_500"
+            app:backgroundTint="@color/blue_200"
             app:cornerRadius="8dp"
             tools:ignore="VisualLintButtonSize,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
@@ -167,13 +167,14 @@
             android:text="@string/continue_with_google"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:backgroundTint="@color/blue_500"
+            app:backgroundTint="@color/blue_200"
             app:cornerRadius="8dp"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconSize="24dp"
             tools:ignore="VisualLintButtonSize,TextContrastCheck" />
     </LinearLayout>
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
