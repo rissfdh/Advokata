@@ -31,17 +31,23 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        observeSession()
+        setupClickListeners()
+    }
 
-        observeViewModel()
-
+    private fun setupClickListeners() {
         binding.btnLogout.setOnClickListener {
             profileViewModel.logout()
         }
     }
 
-    private fun observeViewModel() {
-        profileViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
-            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    private fun observeSession() {
+        profileViewModel.getSession().observe(viewLifecycleOwner) { user ->
+            if (user.isLoggedIn) {
+                binding.tvEmail.text = user.email
+            } else {
+                binding.tvEmail.text = getString(R.string.emailuser_gmail_com)
+            }
         }
 
         profileViewModel.isLoggedOut.observe(viewLifecycleOwner) { isLoggedOut ->
@@ -58,9 +64,5 @@ class ProfileFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        fun newInstance() = ProfileFragment()
     }
 }

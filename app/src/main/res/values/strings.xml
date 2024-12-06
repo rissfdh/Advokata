@@ -40,5 +40,9 @@
     <string name="lawyer_list_title">Lawyer List</string>
     <string name="news_list_title">Berita Terbaru</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="nama_user">Nama User</string>
+    <string name="emailuser_gmail_com">emailuser@gmail.com</string>
+    <string name="kota_asal_user">Kota asal user</string>
+    <string name="tentang_kami">Tentang Kami</string>
 
 </resources>
