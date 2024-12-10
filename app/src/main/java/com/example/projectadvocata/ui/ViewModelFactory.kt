@@ -8,6 +8,7 @@ import com.example.projectadvocata.di.Injection
 import com.example.projectadvocata.ui.login.LoginViewModel
 import com.example.projectadvocata.ui.profile.ProfileViewModel
 import com.example.projectadvocata.ui.register.RegisterViewModel
+
 class ViewModelFactory(private val repository: UserRepository) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
@@ -31,9 +32,7 @@ class ViewModelFactory(private val repository: UserRepository) : ViewModelProvid
             val repository = Injection.provideRepository(context)
             return ViewModelFactory(repository)
         }
+
         fun getAuthInstance(context: Context) = ViewModelFactory(Injection.provideRepository(context))
-
     }
-
 }
-

@@ -8,12 +8,14 @@ import com.example.projectadvocata.data.retrofit.ApiService
 import com.example.projectadvocata.data.retrofit.LoginRequest
 import com.example.projectadvocata.data.retrofit.RegisterRequest
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 
 class UserRepository private constructor(
     private val userPreference: UserPreference,
     private val apiService: ApiService
 ) {
+    // Fungsi untuk register
     suspend fun register(name: String, email: String, password: String): Result<Unit> {
         return try {
             val response = apiService.register(RegisterRequest(name, email, password))
@@ -31,12 +33,20 @@ class UserRepository private constructor(
             Result.failure(e)
         }
     }
-
     suspend fun login(email: String, password: String): Result<LoginResult> {
         return try {
             val response = apiService.login(LoginRequest(email, password))
             if (!response.error) {
-                Result.success(response.loginResult)
+                val loginResult = response.loginResult
+                val user = UserModel(
+                    token = loginResult.token,
+                    name = loginResult.name,
+                    email = email,
+                    isLoggedIn = true
+                )
+
+                saveSession(user)
+                Result.success(loginResult)
             } else {
                 Result.failure(Exception(response.message))
             }
@@ -49,16 +59,30 @@ class UserRepository private constructor(
             Result.failure(e)
         }
     }
+
+
+    // Mengambil data pengguna dari UserPreference dalam bentuk Flow
+    fun getUser(): Flow<UserModel> {
+        return userPreference.getSession() // Mengambil sesi dari UserPreference yang sudah menggunakan DataStore
+    }
+
+    // Menyimpan sesi pengguna
     suspend fun saveSession(user: UserModel) {
         Log.d("UserRepository", "Saving session for user: $user")
         userPreference.saveSession(user)
     }
+
+    // Mengambil sesi pengguna dari UserPreference dalam bentuk Flow
     fun getSession(): Flow<UserModel> {
-        return userPreference.getSession()
+        return userPreference.getSession() // Menggunakan DataStore untuk mendapatkan sesi secara reaktif
     }
+
+    // Fungsi untuk logout
     suspend fun logout() {
         userPreference.logout()
     }
+
+    // Singleton untuk mendapatkan instance UserRepository
     companion object {
         @Volatile
         private var instance: UserRepository? = null
@@ -66,8 +90,6 @@ class UserRepository private constructor(
         fun getInstance(userPreference: UserPreference, apiService: ApiService): UserRepository =
             instance ?: synchronized(this) {
                 instance ?: UserRepository(userPreference, apiService)
-            }.also { instance = it
-            }
+            }.also { instance = it }
     }
-
 }

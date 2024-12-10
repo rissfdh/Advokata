@@ -11,7 +11,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.projectadvocata.R
 import com.example.projectadvocata.databinding.ActivityProfileBinding
 import com.example.projectadvocata.ui.ViewModelFactory
-import com.example.projectadvocata.ui.chatbot.ChatbotActivity
 import com.example.projectadvocata.ui.login.LoginActivity
 
 class ProfileActivity : AppCompatActivity() {
@@ -46,8 +45,10 @@ class ProfileActivity : AppCompatActivity() {
     private fun observeSession() {
         profileViewModel.getSession().observe(this) { user ->
             if (user.isLoggedIn) {
+                binding.tvName.text  =  user.name
                 binding.tvEmail.text = user.email
             } else {
+                binding.tvName.text  = getString(R.string.nama_user)
                 binding.tvEmail.text = getString(R.string.emailuser_gmail_com)
             }
         }

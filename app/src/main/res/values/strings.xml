@@ -48,5 +48,10 @@
     <string name="about_us">Tentang Kami</string>
     <string name="back_button">Back</string>
     <string name="logout_button">LOGOUT</string>
+    <string name="save">SAVE</string>
+    <string name="asal_kota">Asal kota</string>
+    <string name="consult">Consult</string>
+    <string name="price">Rp. 100.000</string>
+    <string name="lawyer_name">lawyer name</string>
 
 </resources>
