@@ -21,7 +21,7 @@ class LoginViewModel(private val loginRepository: UserRepository) : ViewModel() 
     val isLoading: LiveData<Boolean> = _isLoading
 
     fun getSession(): Flow<UserModel> {
-        return loginRepository.getUser()  // Mengambil data pengguna dari repository
+        return loginRepository.getUser()
     }
 
     fun login(email: String, password: String) {
