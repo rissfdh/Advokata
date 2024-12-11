@@ -192,7 +192,7 @@
             app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_buttons" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_event"
+            android:id="@+id/recyclerViewNews"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
