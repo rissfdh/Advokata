@@ -5,7 +5,7 @@
     android:id="@+id/uud"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.webview.UUD">
+    tools:context=".ui.compliment.UUD">
 
     <WebView
         android:id="@+id/webViewUUD"

@@ -50,11 +50,16 @@
             android:exported="false"
             android:parentActivityName=".ui.profile.ProfileActivity" />
         <activity
-            android:name=".ui.webview.UUD"
+            android:name=".ui.compliment.UUD"
             android:exported="true" />
         <activity
-            android:name=".ui.webview.UUKUHP"
+            android:name=".ui.compliment.UUKUHP"
             android:exported="true" />
+        <activity
+            android:name=".ui.compliment.DetailNews"
+            android:exported="true" />
+
+
     </application>
 
 </manifest>

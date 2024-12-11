@@ -1,4 +1,4 @@
-package com.example.projectadvocata.ui.webview
+package com.example.projectadvocata.ui.compliment
 
 import android.annotation.SuppressLint
 import android.os.Bundle

@@ -53,5 +53,7 @@
     <string name="consult">Consult</string>
     <string name="price">Rp. 100.000</string>
     <string name="lawyer_name">lawyer name</string>
+    <string name="nama_berita">Nama Berita</string>
+    <string name="deskripsi_berita">Deskripsi Berita</string>
 
 </resources>
