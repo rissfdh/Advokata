@@ -1,0 +1,8 @@
+runtime: nodejs20  # Use the appropriate Node.js version
+
+env_variables:
+  DB_USER: rifal
+  DB_PASSWORD: password123
+  DB_NAME: advokataDB
+  CLOUD_SQL_CONNECTION_NAME: artful-mystery-441112-u2:asia-southeast2:db-advokata
+  GCS_BUCKET_NAME : advokata-1933-bucket
