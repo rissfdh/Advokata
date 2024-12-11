@@ -38,8 +38,8 @@ class LoginActivity : AppCompatActivity() {
         setupView()
         setupAction()
         setupClickListeners()
-
     }
+
     private fun setupEmailValidation() {
         val emailEditText: EditText = binding.tietEmailInput
 
@@ -77,10 +77,12 @@ class LoginActivity : AppCompatActivity() {
         binding.mbGoogleLoginButton.setOnClickListener {
             showToast("Google Sign In akan diimplementasikan")
         }
-        binding.tvSignupButton.setOnClickListener{
+
+        binding.tvSignupButton.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
+
     private fun setupView() {
         @Suppress("DEPRECATION")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -115,15 +117,21 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.isLoginSuccessful.observe(this) { isSuccessful ->
             if (isSuccessful) {
                 Log.d("LoginActivity", "Login successful, navigating to MainActivity")
-                AlertDialog.Builder(this).apply {
-                    setTitle("Login Berhasil")
-                    setMessage("Selamat datang!")
-                    setPositiveButton("OK") { _, _ ->
-                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                        finish()
+
+                // Mengambil data session
+                lifecycleScope.launch {
+                    loginViewModel.getSession().collect { user ->
+                        AlertDialog.Builder(this@LoginActivity).apply {
+                            setTitle("Login Berhasil")
+                            setMessage("Selamat datang, ${user.name}!")  // Tampilkan nama
+                            setPositiveButton("OK") { _, _ ->
+                                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                                finish()
+                            }
+                            create()
+                            show()
+                        }
                     }
-                    create()
-                    show()
                 }
             }
         }
@@ -143,5 +151,4 @@ class LoginActivity : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
 }

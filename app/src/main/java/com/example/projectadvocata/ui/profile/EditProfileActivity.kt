@@ -17,7 +17,7 @@ class EditProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Setup aksi untuk tombol "SAVE"
-        binding.btnLogout.setOnClickListener {
+        binding.btnSave.setOnClickListener {
             saveProfile()
         }
 

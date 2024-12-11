@@ -7,8 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.projectadvocata.data.repo.UserRepository
 import com.example.projectadvocata.data.pref.UserModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
-
 class LoginViewModel(private val loginRepository: UserRepository) : ViewModel() {
 
     private val _isLoginSuccessful = MutableLiveData<Boolean>()
@@ -20,17 +20,8 @@ class LoginViewModel(private val loginRepository: UserRepository) : ViewModel() 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-
-    private fun saveSession(user: UserModel) {
-        viewModelScope.launch {
-            try {
-                Log.d("LoginViewModel", "Saving session for: $user")
-                loginRepository.saveSession(user)
-                Log.d("LoginViewModel", "Session saved successfully")
-            } catch (e: Exception) {
-                Log.e("LoginViewModel", "Error saving session: ${e.message}")
-            }
-        }
+    fun getSession(): Flow<UserModel> {
+        return loginRepository.getUser()  // Mengambil data pengguna dari repository
     }
 
     fun login(email: String, password: String) {
@@ -38,18 +29,16 @@ class LoginViewModel(private val loginRepository: UserRepository) : ViewModel() 
         viewModelScope.launch {
             val result = loginRepository.login(email, password)
             result.onSuccess { loginResult ->
-                Log.d("LoginViewModel", "Login successful: ${loginResult.token}")
-                saveSession(UserModel(email, loginResult.token, true))
+                val user = UserModel(email, loginResult.token, loginResult.name, true)
+                loginRepository.saveSession(user)  // Menyimpan sesi pengguna
                 _isLoginSuccessful.value = true
                 _isLoading.value = false
                 _errorMessage.value = null
             }.onFailure { exception ->
-                Log.e("LoginViewModel", "Login failed: ${exception.message}")
                 _isLoginSuccessful.value = false
                 _isLoading.value = false
                 _errorMessage.value = exception.message
             }
         }
     }
-
 }

@@ -38,6 +38,10 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        mlModelBinding = true
+    }
+    androidResources {
+        noCompress += "tflite"
     }
 }
 
@@ -55,6 +59,8 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.firebase.database)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -68,6 +74,20 @@ dependencies {
     implementation(libs.androidx.exifinterface)
     implementation (libs.material.v1110)
     implementation (libs.material.v140)
-    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation (libs.circleimageview)
+    implementation (libs.androidx.room.runtime)
+    implementation (libs.room.ktx)
+
+
+    implementation (libs.androidx.datastore.core)
+
+    implementation (libs.jetbrains.kotlinx.coroutines.core)
+    implementation (libs.kotlinx.coroutines.android)
+
+
+    implementation (libs.gson) // Untuk parsing JSON (tokenizer dan embeddings)
+    implementation (libs.androidx.appcompat.v131)
+    implementation (libs.commons.math3)
+
 
 }
