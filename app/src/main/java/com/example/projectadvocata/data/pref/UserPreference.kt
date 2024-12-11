@@ -38,7 +38,6 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-
     // Fungsi untuk mengambil sesi (data pengguna) dari DataStore sebagai Flow
     fun getSession(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
@@ -54,7 +53,6 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             user
         }
     }
-
 
     // Fungsi untuk logout dengan menghapus sesi
     suspend fun logout() {

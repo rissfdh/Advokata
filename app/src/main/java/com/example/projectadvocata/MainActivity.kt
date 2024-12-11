@@ -9,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.projectadvocata.databinding.ActivityMainBinding
+import com.example.projectadvocata.ui.chatbot.ChatbotActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 
@@ -36,8 +37,8 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         val fab: View = findViewById(R.id.fab)
-//        fab.setOnClickListener {
-//            startActivity(Intent(this, ChatbotActivity::class.java))
-//        }
+        fab.setOnClickListener {
+            startActivity(Intent(this, ChatbotActivity::class.java))
+        }
     }
 }
