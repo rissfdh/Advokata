@@ -25,6 +25,7 @@ class ChatbotActivity : AppCompatActivity() {
         binding = ActivityChatbotBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.progressBar.visibility = View.GONE
+        supportActionBar?.title = "Chatbot"
 
         chatAdapter = ChatAdapter(messageBots)
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(this)

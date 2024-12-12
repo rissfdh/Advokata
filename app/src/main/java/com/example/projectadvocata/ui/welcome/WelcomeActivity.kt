@@ -3,6 +3,7 @@ package com.example.projectadvocata.ui.welcome
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.projectadvocata.MainActivity
@@ -21,6 +22,7 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+        enableEdgeToEdge()
         supportActionBar?.hide()
         userPreference = UserPreference.getInstance(applicationContext.dataStore)
 

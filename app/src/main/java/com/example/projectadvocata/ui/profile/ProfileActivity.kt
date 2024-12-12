@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.projectadvocata.R
 import com.example.projectadvocata.databinding.ActivityProfileBinding
 import com.example.projectadvocata.ui.ViewModelFactory
+import com.example.projectadvocata.ui.chatbot.ChatbotActivity
 import com.example.projectadvocata.ui.login.LoginActivity
 
 class ProfileActivity : AppCompatActivity() {
@@ -20,9 +21,14 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
-
+        supportActionBar?.hide()
         setContentView(binding.root)
+
+        // Handle klik tombol kembali
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         observeSession()
         setupClickListeners()
     }
@@ -42,10 +48,8 @@ class ProfileActivity : AppCompatActivity() {
     private fun observeSession() {
         profileViewModel.getSession().observe(this) { user ->
             if (user.isLoggedIn) {
-                binding.tvName.text  =  user.name
                 binding.tvEmail.text = user.email
             } else {
-                binding.tvName.text  = getString(R.string.nama_user)
                 binding.tvEmail.text = getString(R.string.emailuser_gmail_com)
             }
         }
