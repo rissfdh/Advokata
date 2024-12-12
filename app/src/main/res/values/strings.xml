@@ -55,5 +55,7 @@
     <string name="lawyer_name">lawyer name</string>
     <string name="nama_berita">Nama Berita</string>
     <string name="deskripsi_berita">Deskripsi Berita</string>
+    <string name="tulis_pesan">Tulis pesan...</string>
+    <string name="kirim">Kirim</string>
 
 </resources>

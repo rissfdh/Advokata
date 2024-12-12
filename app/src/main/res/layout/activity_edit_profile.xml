@@ -160,15 +160,13 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="528dp"
-        android:backgroundTint="@color/blue_200"
+        android:layout_margin="10dp"
         android:contentDescription="@string/flowat"
         android:src="@drawable/baseline_edit_24"
         app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="RedundantDescriptionCheck" />
+        app:layout_constraintBottom_toTopOf="@+id/cvName"
+        app:layout_constraintStart_toEndOf="@+id/cvProfilePhoto"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

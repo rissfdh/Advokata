@@ -50,10 +50,15 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRecyclerViews() {
+
+
         // Set RecyclerView layout manager and adapter
         binding.recyclerViewNews.layoutManager = LinearLayoutManager(context)
         // Add sample data for News
-        listNews.addAll(getListNews())
+        if (listNews.isEmpty()) {
+            listNews.addAll(getListNews())
+        }
+
         val adapter = ListNewsAdapter(listNews)
         binding.recyclerViewNews.adapter = adapter
     }
@@ -73,8 +78,6 @@ class HomeFragment : Fragment() {
 
         return newsList
     }
-
-
 
 
     override fun onDestroyView() {
