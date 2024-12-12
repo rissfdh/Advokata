@@ -11,7 +11,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.projectadvocata.databinding.ActivityMainBinding
 import com.example.projectadvocata.ui.chatbot.ChatbotActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
