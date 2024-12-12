@@ -19,7 +19,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_have_account">Already have account?</string>
     <string name="user_name">Name</string>
-    <string name="title_welcome_page">Advocata - Mitra Hukum Anda</string>
+    <string name="title_welcome_page">Advokata - Mitra Hukum Anda</string>
     <string name="message_welcome_page">Solusi terbaik untuk mendukung kebutuhan hukum Anda. Bersama kami, wujudkan pelayanan yang cepat, transparan, dan terpercaya</string>
     <string name="get_started_button">Get Started</string>
     <string name="flowat">Floating Button</string>
@@ -57,5 +57,12 @@
     <string name="deskripsi_berita">Deskripsi Berita</string>
     <string name="tulis_pesan">Tulis pesan...</string>
     <string name="kirim">Kirim</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="welcome_to_advokata">Welcome to Advokata</string>
+    <string name="ingin_mencari_lawyer_untuk_menangani_kasusmu_nklik_tombol_cari_di_bawah">Ingin Mencari Lawyer Untuk Menangani Kasusmu?\nKlik Tombol Cari di Bawah!</string>
+    <string name="cari_pengacara">Cari Pengacara</string>
+    <string name="kategori_hukum">Kategori Hukum</string>
+    <string name="perda">Perda</string>
+    <string name="perpu">Perpu</string>
 
 </resources>

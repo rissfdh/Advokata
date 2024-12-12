@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" /> <!-- Background putih -->
+    <corners android:radius="16dp" /> <!-- Sudut rounded dengan radius 8dp -->
+    <stroke
+        android:color="@color/blue_700"
+        android:width="2dp" /> <!-- Lebar border -->
+</shape>
