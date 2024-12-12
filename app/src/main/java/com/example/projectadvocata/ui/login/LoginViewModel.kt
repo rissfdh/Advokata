@@ -1,6 +1,5 @@
 package com.example.projectadvocata.ui.login
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,7 +29,7 @@ class LoginViewModel(private val loginRepository: UserRepository) : ViewModel() 
             val result = loginRepository.login(email, password)
             result.onSuccess { loginResult ->
                 val user = UserModel(email, loginResult.token, loginResult.name, true)
-                loginRepository.saveSession(user)  // Menyimpan sesi pengguna
+                loginRepository.saveSession(user)
                 _isLoginSuccessful.value = true
                 _isLoading.value = false
                 _errorMessage.value = null

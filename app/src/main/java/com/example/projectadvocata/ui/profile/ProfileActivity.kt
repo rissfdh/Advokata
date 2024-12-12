@@ -3,11 +3,8 @@ package com.example.projectadvocata.ui.profile
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.projectadvocata.R
 import com.example.projectadvocata.databinding.ActivityProfileBinding
 import com.example.projectadvocata.ui.ViewModelFactory
@@ -60,7 +57,7 @@ class ProfileActivity : AppCompatActivity() {
                     flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 }
                 startActivity(intent)
-                finish()  // Close the ProfileActivity to prevent back navigation
+                finish()
             }
         }
     }
