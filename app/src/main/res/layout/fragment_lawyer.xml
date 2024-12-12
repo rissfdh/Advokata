@@ -8,7 +8,7 @@
     tools:context=".ui.lawyer.LawyerFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewLawyers"
+        android:id="@+id/recyclerViewLawyer"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"

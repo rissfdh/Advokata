@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projectadvocata.R
 import com.example.projectadvocata.databinding.FragmentHomeBinding
@@ -39,6 +40,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerViews()
+
+        binding.buttonCariPengacara.setOnClickListener {
+            val navController = findNavController()
+            navController.navigate(R.id.action_home_to_lawyer)
+        }
+
         binding.buttonKUHP.setOnClickListener {
             val intent = Intent(requireContext(), UUKUHP::class.java)
             startActivity(intent)

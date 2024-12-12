@@ -15,7 +15,6 @@ class ChatAdapter(private val messages: MutableList<Message>) : RecyclerView.Ada
         val messageText: TextView = view.findViewById(R.id.messageText)
     }
 
-    // Menentukan layout mana yang akan dipakai berdasarkan jenis pesan
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
         val layoutResId = if (viewType == MESSAGE_TYPE_USER) {
             R.layout.chat_item  // Pesan pengguna
@@ -35,7 +34,6 @@ class ChatAdapter(private val messages: MutableList<Message>) : RecyclerView.Ada
         return messages.size
     }
 
-    // Menentukan tipe pesan untuk memilih layout
     override fun getItemViewType(position: Int): Int {
         return if (messages[position].isUser) MESSAGE_TYPE_USER else MESSAGE_TYPE_BOT
     }
