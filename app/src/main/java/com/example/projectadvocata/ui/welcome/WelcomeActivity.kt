@@ -39,7 +39,6 @@ class WelcomeActivity : AppCompatActivity() {
     }
     private fun checkLoginStatus() {
         lifecycleScope.launch {
-            // Menggunakan getSession() untuk mendapatkan Flow<UserModel> dan collect data pertama
             val user = userPreference.getSession().first()
 
             if (user.isLoggedIn) {

@@ -8,12 +8,10 @@ import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-// Membuat properti ekstensi untuk DataStore pada objek Context
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "session")
 
 class UserPreference private constructor(private val dataStore: DataStore<Preferences>) {
 
-    // Kunci preferensi
     private val TOKEN_KEY = stringPreferencesKey("token")
 
     private val NAME_KEY = stringPreferencesKey("name")
@@ -21,7 +19,6 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     private val EMAIL_KEY = stringPreferencesKey("email")
     private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
 
-    // Fungsi untuk menyimpan sesi (data pengguna) ke DataStore
     suspend fun saveSession(user: UserModel) {
         try {
             dataStore.edit { preferences ->
@@ -38,7 +35,6 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    // Fungsi untuk mengambil sesi (data pengguna) dari DataStore sebagai Flow
     fun getSession(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
             val token = preferences[TOKEN_KEY] ?: ""
@@ -54,7 +50,6 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    // Fungsi untuk logout dengan menghapus sesi
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences.clear()
@@ -62,12 +57,10 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         Log.d("UserPreference", "User logged out, session cleared.")
     }
 
-    // Singleton pattern untuk mendapatkan instance dari UserPreference
     companion object {
         @Volatile
         private var INSTANCE: UserPreference? = null
 
-        // Menggunakan pola singleton untuk mendapatkan instance dari UserPreference
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: UserPreference(dataStore).also { INSTANCE = it }

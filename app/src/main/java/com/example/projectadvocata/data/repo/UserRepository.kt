@@ -8,7 +8,6 @@ import com.example.projectadvocata.data.retrofit.ApiService
 import com.example.projectadvocata.data.retrofit.LoginRequest
 import com.example.projectadvocata.data.retrofit.RegisterRequest
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 
 class UserRepository private constructor(
@@ -60,9 +59,8 @@ class UserRepository private constructor(
         }
     }
 
-    // Mengambil data pengguna dari UserPreference dalam bentuk Flow
     fun getUser(): Flow<UserModel> {
-        return userPreference.getSession() // Mengambil sesi dari UserPreference yang sudah menggunakan DataStore
+        return userPreference.getSession()
     }
 
     // Menyimpan sesi pengguna
@@ -71,9 +69,8 @@ class UserRepository private constructor(
         userPreference.saveSession(user)
     }
 
-    // Mengambil sesi pengguna dari UserPreference dalam bentuk Flow
     fun getSession(): Flow<UserModel> {
-        return userPreference.getSession() // Menggunakan DataStore untuk mendapatkan sesi secara reaktif
+        return userPreference.getSession()
     }
 
     // Fungsi untuk logout
@@ -81,7 +78,6 @@ class UserRepository private constructor(
         userPreference.logout()
     }
 
-    // Singleton untuk mendapatkan instance UserRepository
     companion object {
         @Volatile
         private var instance: UserRepository? = null

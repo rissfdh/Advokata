@@ -37,17 +37,15 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        // Menggunakan setOnItemSelectedListener (pengganti dari setOnNavigationItemSelectedListener)
         navView.setOnItemSelectedListener { item: MenuItem ->
             when (item.itemId) {
                 R.id.navigation_profile -> {
                     // Langsung membuka ProfileActivity tanpa melewati fragment
                     val intent = Intent(this, ProfileActivity::class.java)
                     startActivity(intent)
-                    true // Mengindikasikan item ini sudah diproses
+                    true
                 }
                 else -> {
-                    // Biarkan navigasi fragment berfungsi seperti biasa
                     navController.navigate(item.itemId)
                     true
                 }

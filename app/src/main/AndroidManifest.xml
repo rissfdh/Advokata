@@ -58,6 +58,10 @@
         <activity
             android:name=".ui.compliment.DetailNews"
             android:exported="true" />
+        <activity android:name=".ui.lawyer.LawyerChatActivity">
+
+        </activity>
+
 
 
     </application>

@@ -20,6 +20,6 @@ class AboutUsActivity : AppCompatActivity() {
     }
 
     fun onBackButtonClicked(view: android.view.View) {
-        finish() // Menutup Activity AboutUs dan kembali ke Activity sebelumnya
+        finish()
     }
 }

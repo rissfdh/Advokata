@@ -26,13 +26,11 @@ class ListNewsAdapter(private val listNews: ArrayList<News>) :
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val news = listNews[position]
 
-        // Set data pada item
         holder.imgPhoto.setImageResource(news.photo)
         holder.tvName.text = news.name
         holder.tvDescription.text = news.description
 
         holder.itemView.setOnClickListener {
-            // Mengirim data ke DetailNews Activity
             val intent = Intent(holder.itemView.context, DetailNews::class.java)
             intent.putExtra("NEWS_PHOTO", news.photo)
             intent.putExtra("NEWS_NAME", news.name)
