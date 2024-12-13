@@ -50,9 +50,12 @@ class ProfileActivity : AppCompatActivity() {
             if (user.isLoggedIn) {
                 binding.tvName.text  =  user.name
                 binding.tvEmail.text = user.email
+                binding.tvName.text = user.name
+
             } else {
                 binding.tvName.text  = getString(R.string.nama_user)
                 binding.tvEmail.text = getString(R.string.emailuser_gmail_com)
+                binding.tvName.text = getString(R.string.nama_user)
             }
         }
 
