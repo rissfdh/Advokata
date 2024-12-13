@@ -64,5 +64,6 @@
     <string name="kategori_hukum">Kategori Hukum</string>
     <string name="perda">Perda</string>
     <string name="perpu">Perpu</string>
+    <string name="name_lawyer">Name Lawyer</string>
 
 </resources>

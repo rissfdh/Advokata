@@ -94,7 +94,6 @@ class HomeFragment : Fragment() {
                 R.drawable.news3
             )
         )
-
         return newsList
     }
 
