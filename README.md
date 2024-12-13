@@ -32,3 +32,35 @@ This app meant to be our final project for Google Bangkit Academy 2024 batch 2.
 Advokata is an AI-integrated legal aid platform focusing on public welfare by ensuring legal certainty and providing access to justice for all members of society, equally, economically without exception. We provide some key feature in front of you that we hope could cover the discrepancy amongst indonesia's legal practice so that we'll have a bigger and a better law environment by the year of 2045. With those features we propose a solutions to provide a practical method to do legal consultation, Providing an easy access of criminal lawyer around user, and collect regulations database.
 
 We  engage this idea based on our personal concern strengthened by the statistics of public perception on law. Why ? Because from the data brings by LBH-YLBHI in 2023, stated that only 10-20% of defendants receive a legal assistance. Which means in every 10 cases of judicial trial occur in Indosia, only 1 or 2 of them have their own lawyer while the rest 7 to 8 people are facing their trial alone without the helps of a lawyer. In the other hand, there's an anomaly between the supply of law bachelors and the demand of public advocates here in indonesia. according to Federal reserve bank of New York and payscale. This gap causing a tragic dissatisfaction amongst indonesian people proven by the percentage in the graph beside. Not to be mistaken, the number of 57% is not a humongous satisfaction.
+
+## Features
+- [x] Welcoming Activity
+- [x] Login
+- [x] Register
+- [x] Bottom Navigation
+- [x] News Feature
+- [x] Lawyer MarketPlace Feature
+- [x] Produk Hukum Feature 
+- [x] Advobot Feature
+- [x] Edit Profil Feature
+
+
+## Installation
+
+### 1. Clone this Project to your Computer
+bash
+git clone https://github.com/rissfdh/Advokata.git
+
+
+or you can use Android Studio 
+
+File > New > Project from Version Control ...
+
+### 2. Open the Project in your Android Studio
+Open Android Studio and select open an existing project.
+
+### 3. Run Project in Android Studio
+Wait for Gradle Build to Finish and finally press the Run > Run ‘app’. Now the app has been installed in your phone / emulator. Make sure that you have configured your android device or emulator 
+
+
+## Thank You :)
