@@ -53,6 +53,12 @@
             android:name=".ui.compliment.UUD"
             android:exported="true" />
         <activity
+            android:name=".ui.compliment.PERPU"
+            android:exported="true" />
+        <activity
+            android:name=".ui.compliment.PERDA"
+            android:exported="true" />
+        <activity
             android:name=".ui.compliment.UUKUHP"
             android:exported="true" />
         <activity

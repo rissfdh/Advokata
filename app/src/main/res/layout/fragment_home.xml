@@ -99,27 +99,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingHorizontal="14dp">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardButtonKUHP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <TextView
-                        android:id="@+id/buttonKUHP"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/blue_200"
-                        android:paddingHorizontal="24dp"
-                        android:paddingVertical="16dp"
-                        android:text="@string/uu_kuhp"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp" />
-                </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardButtonUUD"
                     android:layout_width="wrap_content"
@@ -141,7 +120,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardButtonPerda"
+                    android:id="@+id/cardButtonKUHP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -149,32 +128,54 @@
                     app:cardElevation="4dp">
 
                     <TextView
-                        android:id="@+id/buttonPerda"
+                        android:id="@+id/buttonKUHP"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@color/blue_200"
                         android:paddingHorizontal="24dp"
                         android:paddingVertical="16dp"
-                        android:text="@string/perda"
+                        android:text="@string/uu_kuhp"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardButtonPERPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/buttonPERPU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue_200"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="16dp"
+                        android:text="@string/perpu"
                         android:textColor="@android:color/white"
                         android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardButtonPerpu"
+                    android:id="@+id/cardButtonPERDA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp">
 
                     <TextView
-                        android:id="@+id/buttonPerpu"
+                        android:id="@+id/buttonPERDA"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/blue_200"
                         android:paddingHorizontal="24dp"
                         android:paddingVertical="16dp"
-                        android:text="@string/perpu"
+                        android:text="@string/perda"
                         android:textColor="@android:color/white"
                         android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>

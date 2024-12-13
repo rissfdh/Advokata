@@ -14,6 +14,8 @@ import com.example.projectadvocata.databinding.FragmentHomeBinding
 import com.example.projectadvocata.ui.ViewModelFactory
 import com.example.projectadvocata.ui.compliment.ListNewsAdapter
 import com.example.projectadvocata.ui.compliment.News
+import com.example.projectadvocata.ui.compliment.PERDA
+import com.example.projectadvocata.ui.compliment.PERPU
 import com.example.projectadvocata.ui.compliment.UUD
 import com.example.projectadvocata.ui.compliment.UUKUHP
 import kotlin.getValue
@@ -54,14 +56,20 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), UUD::class.java)
             startActivity(intent)
         }
+        binding.buttonPERPU.setOnClickListener {
+            val intent = Intent(requireContext(), PERPU::class.java)
+            startActivity(intent)
+        }
+        binding.buttonPERDA.setOnClickListener {
+            val intent = Intent(requireContext(), PERDA::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupRecyclerViews() {
 
 
-        // Set RecyclerView layout manager and adapter
         binding.recyclerViewNews.layoutManager = LinearLayoutManager(context)
-        // Add sample data for News
         if (listNews.isEmpty()) {
             listNews.addAll(getListNews())
         }
@@ -89,9 +97,17 @@ class HomeFragment : Fragment() {
         )
         newsList.add(
             News(
-                "Agus \"Sedih Banget\" Sampai Sesegukan Dibully Netizen\n",
+                "Agus \"Sedih Banget\" Sampai Sesegukan Dibully Netizen",
                 "Kisruh soal uang donasi antara Agus Salim, Noviyanthi Pratiwi dan Denny Sumargo masih terus berlanjut makain panas. Diketahui, Teh Novi dan Denny Sumargo merupakan orang yang pertama kali membuka donasi untuk Agus. Namun kasus ini semakin rumit lantaran Agus disebut tidak memanfaatkan duit itu untuk keperluan pengobatan. Apalagi kini Agus dibantu oleh pengacara Farhat Abas dan Alvin Lim yang dianggap semakin memperkeruh keadaan.\n",
                 R.drawable.news3
+            )
+        )
+        newsList.add(
+            News(
+                "Agus Bikin Masalah Lagi, Bakar Kantor Pajak di Lampung",
+                "Nama Agus kini tengah viral di media sosial. Menyusul kasus Agus Salim yang menjadi korban penyiraman air keras, Agus Buntung yang diduga memperkosa 15 wanita, kini jagat maya dihebohkan dengan aksi Agus Rahmat.\n" +
+                        "Pria berusia 38 tahun itu ditangkap polisi karena terbukti membakar Kantor Pelayanan Pajak Pratama Kotabumi, Lampung Utara, Lampung pada Sabtu (7/12/2024) malam. \n",
+                R.drawable.agus_bakar
             )
         )
         return newsList
