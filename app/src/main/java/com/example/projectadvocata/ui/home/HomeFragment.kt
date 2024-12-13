@@ -14,6 +14,8 @@ import com.example.projectadvocata.databinding.FragmentHomeBinding
 import com.example.projectadvocata.ui.ViewModelFactory
 import com.example.projectadvocata.ui.compliment.ListNewsAdapter
 import com.example.projectadvocata.ui.compliment.News
+import com.example.projectadvocata.ui.compliment.PERDA
+import com.example.projectadvocata.ui.compliment.PERPU
 import com.example.projectadvocata.ui.compliment.UUD
 import com.example.projectadvocata.ui.compliment.UUKUHP
 import kotlin.getValue
@@ -52,6 +54,14 @@ class HomeFragment : Fragment() {
         }
         binding.buttonUUD.setOnClickListener {
             val intent = Intent(requireContext(), UUD::class.java)
+            startActivity(intent)
+        }
+        binding.buttonPERPU.setOnClickListener {
+            val intent = Intent(requireContext(), PERPU::class.java)
+            startActivity(intent)
+        }
+        binding.buttonPERDA.setOnClickListener {
+            val intent = Intent(requireContext(), PERDA::class.java)
             startActivity(intent)
         }
     }

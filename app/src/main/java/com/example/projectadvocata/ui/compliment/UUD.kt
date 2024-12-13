@@ -22,7 +22,6 @@ class UUD : AppCompatActivity() {
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
-                view.loadUrl("javascript:alert('Web UUD 1945 Berhasil di muat')")
             }
         }
 
