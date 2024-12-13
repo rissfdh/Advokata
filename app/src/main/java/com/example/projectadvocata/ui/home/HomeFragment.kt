@@ -24,11 +24,6 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val homeViewModel: HomeViewModel by viewModels {
-        ViewModelFactory.getAuthInstance(
-            requireActivity()
-        )
-    }
     private val listNews = ArrayList<News>()
 
     override fun onCreateView(

@@ -24,6 +24,7 @@ class LawyerChatActivity : AppCompatActivity() {
 
         binding = ActivityChatLawyerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.hide()
         binding.progressBar.visibility = View.GONE
 
         lawyerChatAdapter = LawyerChatAdapter(messageLawyer)

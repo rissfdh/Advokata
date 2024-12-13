@@ -14,6 +14,7 @@
     <color name="rectangle_10_color">#D9D9D9</color>
     <color name="dark_green">#009688</color>
     <color name="_5f897b">#5F897B</color>
-    <color name="card_background">#F5F5F5</color> <!-- Sesuaikan warna sesuai desain Anda -->
+    <color name="card_background">#F5F5F5</color>
+    <color name="grey">#4D4D4D</color> <!-- Sesuaikan warna sesuai desain Anda -->
 
 </resources>

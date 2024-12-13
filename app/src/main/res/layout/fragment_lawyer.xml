@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_lawyer"
             android:textStyle="bold"
-            android:textColor="@color/blue_700"
+            android:textColor="@color/white"
             android:textAlignment="center"
             android:layout_gravity="center"
             android:textSize="20sp"/>

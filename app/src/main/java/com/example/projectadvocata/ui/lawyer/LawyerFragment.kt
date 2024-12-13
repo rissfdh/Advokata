@@ -25,8 +25,6 @@ class LawyerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerViews()
-
-        activity?.actionBar
     }
     private fun setupRecyclerViews() {
         binding.recyclerViewLawyer.layoutManager = LinearLayoutManager(context)

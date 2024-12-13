@@ -13,25 +13,13 @@
         android:layout_margin="10dp"
         android:paddingBottom="50dp">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:contentDescription="@string/description"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_home"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/gradient_background_about_us"/>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/welcome_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/placeholder_home_welcome"
-            android:elevation="10dp"
+            android:background="@drawable/border"
             android:padding="24dp"
+            android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
