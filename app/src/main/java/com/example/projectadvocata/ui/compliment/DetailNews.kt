@@ -1,11 +1,8 @@
 package com.example.projectadvocata.ui.compliment
-
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -15,7 +12,6 @@ import com.example.projectadvocata.R
 
 class DetailNews : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_news)
@@ -29,6 +25,7 @@ class DetailNews : AppCompatActivity() {
 
         progressBar.visibility = View.VISIBLE
 
+        // Menunggu animasi transisi selesai
         Handler(Looper.getMainLooper()).postDelayed({
             val newsName = intent.getStringExtra("NEWS_NAME")
             val newsDescription = intent.getStringExtra("NEWS_DESCRIPTION")
@@ -46,5 +43,16 @@ class DetailNews : AppCompatActivity() {
 
             progressBar.visibility = View.GONE
         }, 1000)
+
+        val transitionNames = arrayOf("foto", "judul", "deskripsi")
+        val transitionViews = arrayOf(imgPhoto, tvName, tvDescription)
+
+        window.sharedElementEnterTransition = android.transition.TransitionInflater.from(this)
+            .inflateTransition(android.R.transition.move)
+
+        for (i in transitionViews.indices) {
+            val view = transitionViews[i]
+            view.transitionName = transitionNames[i]
+        }
     }
 }
