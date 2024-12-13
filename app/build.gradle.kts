@@ -17,6 +17,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        buildConfigField("String", "BASE_URL", "\"https://artful-mystery-441112-u2.et.r.appspot.com/\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -40,6 +41,7 @@ android {
         viewBinding = true
         buildConfig = true
         mlModelBinding = true
+        buildConfig = true
     }
     androidResources {
         noCompress += "tflite"

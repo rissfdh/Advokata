@@ -13,9 +13,7 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "se
 class UserPreference private constructor(private val dataStore: DataStore<Preferences>) {
 
     private val TOKEN_KEY = stringPreferencesKey("token")
-
     private val NAME_KEY = stringPreferencesKey("name")
-
     private val EMAIL_KEY = stringPreferencesKey("email")
     private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
 
