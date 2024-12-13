@@ -49,8 +49,11 @@ class ProfileActivity : AppCompatActivity() {
         profileViewModel.getSession().observe(this) { user ->
             if (user.isLoggedIn) {
                 binding.tvEmail.text = user.email
+                binding.tvName.text = user.name
+
             } else {
                 binding.tvEmail.text = getString(R.string.emailuser_gmail_com)
+                binding.tvName.text = getString(R.string.nama_user)
             }
         }
 
