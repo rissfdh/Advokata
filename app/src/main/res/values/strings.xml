@@ -34,7 +34,7 @@
     <string name="noData">No Data</string>
 
 
-    <string name="uu_kuhp">UU KUHP</string>
+    <string name="uu_kuhp">KUHP</string>
     <string name="uud_1945">UUD 1945</string>
 
     <string name="lawyer_list_title">Lawyer List</string>
@@ -61,9 +61,9 @@
     <string name="welcome_to_advokata">Welcome to Advokata</string>
     <string name="ingin_mencari_lawyer_untuk_menangani_kasusmu_nklik_tombol_cari_di_bawah">Ingin Mencari Lawyer Untuk Menangani Kasusmu?\nKlik Tombol Cari di Bawah!</string>
     <string name="cari_pengacara">Cari Pengacara</string>
-    <string name="kategori_hukum">Kategori Hukum</string>
-    <string name="perda">Perda</string>
-    <string name="perpu">Perpu</string>
+    <string name="kategori_hukum">Produk Hukum</string>
+    <string name="perda">PERDA</string>
+    <string name="perpu">PERPU</string>
     <string name="name_lawyer">Name Lawyer</string>
 
 </resources>
