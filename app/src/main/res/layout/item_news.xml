@@ -17,6 +17,7 @@
 
         <ImageView
             android:id="@+id/img_item_photo"
+            android:transitionName="foto"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="8dp"
@@ -29,6 +30,7 @@
 
         <TextView
             android:id="@+id/tv_item_name"
+            android:transitionName="judul"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -42,6 +44,7 @@
 
         <TextView
             android:id="@+id/tv_item_description"
+            android:transitionName="deskripsi"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"

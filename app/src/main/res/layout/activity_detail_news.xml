@@ -33,6 +33,7 @@
 
             <ImageView
                 android:id="@+id/img_item_photo"
+                android:transitionName="foto"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:contentDescription="@string/nama_berita"
@@ -40,6 +41,7 @@
 
             <TextView
                 android:id="@+id/tv_item_name"
+                android:transitionName="judul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -49,6 +51,7 @@
 
             <TextView
                 android:id="@+id/tv_item_description"
+                android:transitionName="deskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey"

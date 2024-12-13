@@ -1,6 +1,7 @@
 package com.example.projectadvocata.ui.compliment
-
+import android.app.Activity
 import android.content.Intent
+import android.util.Pair
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,13 @@ class ListNewsAdapter(private val listNews: ArrayList<News>) :
             intent.putExtra("NEWS_NAME", news.name)
             intent.putExtra("NEWS_DESCRIPTION", news.description)
 
-            holder.itemView.context.startActivity(intent)
+            val options = android.app.ActivityOptions.makeSceneTransitionAnimation(
+                holder.itemView.context as Activity,
+                Pair.create(holder.imgPhoto, "foto"),
+                Pair.create(holder.tvName, "judul"),
+                Pair.create(holder.tvDescription, "deskripsi")
+            )
+            holder.itemView.context.startActivity(intent, options.toBundle())
         }
     }
 
